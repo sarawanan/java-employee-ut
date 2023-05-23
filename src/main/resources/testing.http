@@ -1,0 +1,34 @@
+# curl -i -X POST -H "Content-Type:application/json" -d '{"name":"Sarawanan"}' http://localhost:8080/api/employees
+
+###POST create an employee
+POST {{host}}/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "Sarawanan",
+  "lastName": "Mahalingam",
+  "email": "sarawananm@icloud.com",
+  "salary": 15000
+}
+
+###PUT update an employee
+PUT {{host}}/api/employees/1
+Content-Type: application/json
+
+{
+  "firstName": "Krithika",
+  "lastName": "Sarawanan",
+  "email": "krithikasarawanan@yahoo.com",
+  "salary": 12000
+}
+
+###GET employee by id
+GET {{host}}/api/employees/5
+
+###GET all employee
+GET {{host}}/api/employees
+
+###DELETE employee by id
+DELETE {{host}}/api/employees/1
+
+
